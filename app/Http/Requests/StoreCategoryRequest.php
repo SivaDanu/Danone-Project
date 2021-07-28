@@ -26,7 +26,7 @@ class StoreCategoryRequest extends FormRequest
         return
         [
             'image' => 'required',
-            'name' => 'required|unique:post',
+            'name' => 'required',
             'scientific' => 'required',
             'category' => 'required',
             'since' => 'required',

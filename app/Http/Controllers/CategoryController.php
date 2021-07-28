@@ -28,8 +28,11 @@ class CategoryController extends Controller
 
     public function index()
     {
-        $data = Category::all();
-        return view('category.index', ['data_category' => $data]);
+        return view('category.index', [
+            'data_category' => DB::table('categories')->paginate(5)
+        ]);
+        //$data = Category::all();
+        //return view('category.index', ['data_category' => $data]);
     }
 
     /**

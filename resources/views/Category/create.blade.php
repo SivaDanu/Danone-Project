@@ -15,10 +15,10 @@
                     <form action="{{route('category.store')}}" method="POST" enctype="multipart/form-data" id="" data-parsley-validate class="form-horizontal form-label-left">
                         @csrf
                         <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align">Image: <span class="required"></span>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Image: <span></span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
-                                <input type="file" name="image" onchange="readURL(this)" class="choose">
+                                <input type="file" name="image" onchange="readURL(this)" class="">
                                 <img id="blah" width="90" height="100" src="" alt="">
                                     @if ($errors->has('image'))
                                         <span class="text-danger">{{ $errors->first('image') }}</span>
@@ -26,10 +26,11 @@
                             </div>
                         </div>
                         <div class="item form-group">
-                            <label class="col-form-label col-md-3 col-sm-3 label-align">Name : <span class="required"></span>
+                            <label class="col-form-label col-md-3 col-sm-3 label-align">Name : <span></span>
                             </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input type="text" name="name" class="form-control">
+                                <span class="fa fa-question form-control-feedback right" aria-hidden="true"></span>
                                     @if ($errors->has('name'))
                                         <span class="text-danger">{{ $errors->first('name') }}</span>
                                     @endif
@@ -39,6 +40,7 @@
                             <label for="middle-name" class="col-form-label col-md-3 col-sm-3 label-align">Scientific Name : </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input class="form-control" type="text" name="scientific">
+                                <span class="fa fa-github form-control-feedback right" aria-hidden="true"></span>
                                     @if ($errors->has('scientific'))
                                         <span class="text-danger">{{ $errors->first('scientific') }}</span>
                                     @endif
@@ -93,6 +95,7 @@
                             <label for="" class="col-form-label col-md-3 col-sm-3 label-align">Species : </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input class="form-control" type="text" name="species">
+                                <span class="glyphicon glyphicon-tree-deciduous form-control-feedback right" aria-hidden="true"></span>
                                     @if ($errors->has('species'))
                                         <span class="text-danger">{{ $errors->first('species') }}</span>
                                     @endif
@@ -113,6 +116,7 @@
                                     <input type="checkbox" value="Kanivora" class="flat">Karnivora <br/>
                                     <input type="checkbox" value="Omnivora" class="flat">Omnivora <br/>-->
                                 </select>
+                                <span class="fa fa-leaf form-control-feedback right" aria-hidden="true"></span>
                                 @if ($errors->has('type'))
                                     <span class="text-danger">{{ $errors->first('type') }}</span>
                                 @endif
@@ -120,7 +124,7 @@
                         </div>
                         <div class="modal-footer">
                             <div class="col-md-6 col-sm-6 offset-md-3">
-                                <button class="btn btn-light" type="button" text="white">
+                                <button class="btn btn-dark" type="button" text="white">
                                     <a href="{{route ('category.index')}}" text="white">Cancel & Back</a>
                                 </button>
                                 <button class="btn btn-primary" type="reset">Reset</button>
