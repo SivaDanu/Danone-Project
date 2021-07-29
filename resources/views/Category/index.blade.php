@@ -2,6 +2,30 @@
 
 @section('content')
 <div class="right_col" role="main">
+    <div class="">
+      <div class="page-title">
+        <div class="title_left">
+          <h3><small></small></h3>
+        </div>
+
+        <div class="title_right">
+          <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+            <form action="">
+            <div class="input-group">
+              <input type="text" class="form-control" placeholder="Search for..." name="search" id="search">
+              <span class="input-group-btn">
+
+                <button class="btn btn-secondary" type="submit">Go!</button>
+                  </form>
+              </span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="clearfix"></div>
+
+    <div class="row">
     <div class="col-md-12 col-sm-12 ">
         <div class="x_panel">
             <div class="x_title">
@@ -19,15 +43,32 @@
                       </li>
                     </ul>
                     <div class="clearfix"></div>
-            </div>
-                  <a href="{{route('category.create')}}" class="btn btn-info ">
-                    <i class="fa fa-plus"> Add New Category</i>
-                  </a> <br><br>
+                </div>
           <div class="x_content">
+                <div class="row">
+                    <div class="col-sm-5">
+                        <a href="{{route('category.create')}}" class="btn btn-info ">
+                            <i class="fa fa-plus"> Add New Category</i>
+                        </a> <br><br>
+                    </div>
+                    <!--<div class="col-sm-10">
+                        <div class="title_right">
+                            <div class="col-md-5 col-sm-5 col-xs-12 form-group pull-right top_search">
+                        <form action="">
+                        <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search for..." name="search" id="search">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-secondary" type="submit">Go!</button>
+                                    </form>
+                                    </span>
+                            </div>
+                        </div>
+                    </div>-->
+                </div>
               <div class="row">
                 <div class="col-sm-12">
                     <div class="card-box table-responsive">
-          <table id="datatable-fixed-header" class="table table-striped table-bordered" style="width:100%">
+          <table id="datatable-fixed-header" class="table table-hover table-bordered" style="width:100%">
             <thead>
               <tr>
                 <th>No : </th>
@@ -36,7 +77,7 @@
                 <th>Scientific Name : </th>
                 <th>Categories : </th>
                 <th>Since Time : </th>
-                <th>Species : </th>
+                <th>Genus : </th>
                 <th>Type : </th>
                 <th>Action : </th>
               </tr>
@@ -50,7 +91,7 @@
               <tr>
                 <td>{{$data_category->firstItem() + $key}}</td>
                 <td>
-                    <img src="{{asset ('storage/Category/'. $category->image) }}" width="100" height="100" alt="" />
+                    <img src="{{asset ('storage/Category/'. $category->image) }}" class="img-fluid" width="100" height="100" alt="" />
                 </td>
                 <td>{{$category->name}}</td>
                 <td>{{$category->scientific}}</td>
@@ -65,7 +106,7 @@
                         @csrf
                         @method('DELETE')
 
-                        <a class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
+                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></button>
                     </form>
                 </td>
               </tr>
@@ -87,14 +128,13 @@
                     to
                     {{$data_category->lastItem()}}
                     of
-                    {{$data_category->total()}}
-                    entries
+                    ?
                     </div>
                 </div>
                 <div class="col-sm-7">
                     <div class="dataTables_paginate paging_simple_numbers" id="datatable_paginate">
                         <ul class="pagination">
-                            <small>{{ $data_category->links() }}</small>
+                            {{ $data_category->links() }}
                             {{-- <li class="paginate_button previous disabled" id="datatable_previous">
                                 <a href="#" aria-controls="datatable" data-dt-idx="0" tabindex="0">Previous</a>
                             </li>
@@ -106,6 +146,9 @@
                         </li> --}}
                     </ul>
                 </div>
+            </div>
+        </div>
+    </div>
             </div>
         </div>
         </div>

@@ -91,7 +91,7 @@
                             </div>
                         </div>
                         <div class="item form-group">
-                            <label for="" class="col-form-label col-md-4 col-sm-3 label-align">Species : </label>
+                            <label for="" class="col-form-label col-md-4 col-sm-3 label-align">Genus : </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input class="form-control" type="text" name="species" value="{{$category->species}}">
                             </div>
@@ -124,8 +124,7 @@
                                 <button class="btn btn-dark" type="button text-white">
                                     <a href="{{route ('category.index')}}">Cancel & Back</a>
                                 </button>
-                                <button class="btn btn-primary" type="reset">Reset</button>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Update</button>
                             </div>
                         </div>
                     </form>

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Product;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\Http\Requests\StoreProductRequest;
 use App\Http\Requests\UpdateProductRequest;
 
@@ -20,9 +21,12 @@ class ProductController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        $data = Product::all();
+        //$data = Product::all();
+        $data = Product::where('name', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('code', 'like', '%' . $request->get('search') . '%')
+        ->simplePaginate(3);
         return view('product.index', ['data_product' => $data]);
     }
 

@@ -26,13 +26,19 @@ class CategoryController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
+    public function index(Request $request)
     {
-        return view('category.index', [
-            'data_category' => DB::table('categories')->paginate(5)
-        ]);
-        //$data = Category::all();
+        //return view('category.index', [
+        //    'data_category' => DB::table('categories')->paginate(5)
+        //]);
+        //$data = Category::paginate(5);
         //return view('category.index', ['data_category' => $data]);
+        $data = Category::where('name', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('scientific', 'like', '%' . $request->get('search') . '%')
+        ->simplePaginate(3);
+
+
+        return view('category.index', ['data_category' => $data]);
     }
 
     /**

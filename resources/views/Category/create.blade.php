@@ -92,7 +92,7 @@
                             </div>
                         </div>
                         <div class="item form-group">
-                            <label for="" class="col-form-label col-md-3 col-sm-3 label-align">Species : </label>
+                            <label for="" class="col-form-label col-md-3 col-sm-3 label-align">Genus : </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input class="form-control" type="text" name="species">
                                 <span class="glyphicon glyphicon-tree-deciduous form-control-feedback right" aria-hidden="true"></span>
@@ -108,7 +108,7 @@
                                     <option value=""></option>
                                     <option value="FLORA">FLORA</option>
                                     <option value="Herbivora">Herbivora</option>
-                                    <option value="Karnivora">Kranivora</option>
+                                    <option value="Karnivora">Karnivora</option>
                                     <option value="Omnivora">Omnivora</option>
 
                                     <!--<input type="checkbox" value="Flora" class="flat">If Flora Check List This Button! <br/>

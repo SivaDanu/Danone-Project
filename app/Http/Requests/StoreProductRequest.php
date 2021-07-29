@@ -27,7 +27,7 @@ class StoreProductRequest extends FormRequest
         [
             'image' => 'required',
             'code' => 'required',
-            'name' => 'required|unique:post',
+            'name' => 'required',
             'netto' => 'required',
             'stock' => 'required',
             'price' => 'required',

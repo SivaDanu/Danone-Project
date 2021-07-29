@@ -91,8 +91,7 @@
                                 <button class="btn btn-dark" type="button text-white">
                                     <a href="{{route ('product.index')}}">Cancel & Back</a>
                                 </button>
-                                <button class="btn btn-primary" type="reset">Reset</button>
-                                <button type="submit" class="btn btn-success">Submit</button>
+                                <button type="submit" class="btn btn-success">Update</button>
                             </div>
                         </div>
                     </form>
