@@ -19,7 +19,7 @@
                             </label>
                             <div class="col-md-6 col-sm-6 ">
                                 <input type="file" name="image" onchange="readURL(this)" class="choose">
-                                <img id="blah" width="90" height="100" src="" alt="">
+                                <img id="blah" width="90" height="100" src="" alt="" class="img-fluid">
                                     @if ($errors->has('image'))
                                         <span class="text-danger">{{ $errors->first('image') }}</span>
                                     @endif
