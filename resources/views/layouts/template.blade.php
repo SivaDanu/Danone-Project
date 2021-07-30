@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="icon" href="images/favicon.ico" type="image/ico" />
+    <link rel="shortcut icon" href="{{ asset('assets/images/logodanone.jpg') }}">
 
     <title>Danone Project | </title>
 
@@ -58,7 +59,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-                <a href="{{route('home')}}" class="site_title"><i class="fa fa-paw"></i> <b><span class="btn btn-sm text-white">Danone Project</span></b></a>
+                <a href="{{route('home')}}" class="site_title"><i class="fa  fa-github-alt"></i><b><span class="btn btn-sm text-white">Danone Project</span></b></a>
 
             </div>
 
@@ -67,7 +68,7 @@
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="{{ asset('assets/images/pp.jpg') }}" alt="..." class="img-circle profile_img">
+                <img src="{{ asset('assets/images/logodanone.jpg') }}" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -133,7 +134,7 @@
               <ul class=" navbar-right">
                 <li class="nav-item dropdown open" style="padding-left: 15px;">
                   <a href="javascript:;" class="user-profile dropdown-toggle" aria-haspopup="true" id="navbarDropdown" data-toggle="dropdown" aria-expanded="false">
-                    <img src="{{ asset('assets/images/pp.jpg') }}" alt="">{{ Auth::user()->name }}
+                    <img src="{{ asset('assets/images/logodanone.jpg') }}" alt="">{{ Auth::user()->name }}
                   </a>
                   <div class="dropdown-menu dropdown-usermenu pull-right" aria-labelledby="navbarDropdown">
                     <a class="dropdown-item"  href="javascript:;"> Profile</a>
