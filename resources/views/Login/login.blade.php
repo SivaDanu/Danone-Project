@@ -40,6 +40,7 @@
               </div>
               <div>
                 <input type="password" name="password" class="form-control" placeholder="Password" />
+                <a class="reset_pass" href="{{route('password.request')}}"><b>Lost Your Password?</b></a>
               </div>
               <div>
                   <button type="submit" class="btn btn-primary">Log In</button>

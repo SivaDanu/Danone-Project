@@ -89,7 +89,7 @@
                         @csrf
                         @method('DELETE')
 
-                        <a class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></a>
+                        <button class="btn btn-danger btn-xs"><i class="fa fa-trash-o"></i></button>
                     </form>
                 </td>
               </tr>
