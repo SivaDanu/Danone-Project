@@ -31,7 +31,7 @@
             <form method="POST" action="{{ route('password.update') }}">
                 @csrf
                 <input type="hidden" name="token" value="{{$token}}">
-              <h1>Login Form</h1>
+              <h1>Reset Password</h1>
               <div>
                 <input type="email" name="email" class="form-control" placeholder="Email Address" required="" value="{{ $email ?? old('email')}}"/>
                 <span class="text-danger">
@@ -63,8 +63,8 @@
               <div class="clearfix"></div>
 
               <div class="separator">
-                <p class="change_link">New to site?
-                  <a href="#signup" class="to_register"> Create Account </a>
+                <p class="change_link">
+                  <a href="#signup" class="to_register"></a>
                 </p>
 
                 <div class="clearfix"></div>
