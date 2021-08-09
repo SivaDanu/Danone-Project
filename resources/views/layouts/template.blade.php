@@ -59,7 +59,7 @@
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
 
-                <a href="{{route('home')}}" class="site_title"><i class="fa  fa-github-alt"></i><b><span class="btn btn-sm text-white">Danone Project</span></b></a>
+                <a href="{{route('home')}}" class="site_title"><i class="fa fa-github-alt"></i><b><span class="btn btn-sm text-white">Danone Project</span></b></a>
 
             </div>
 

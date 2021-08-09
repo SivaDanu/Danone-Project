@@ -26,7 +26,8 @@ class ProductController extends Controller
         //$data = Product::all();
         $data = Product::where('name', 'like', '%' . $request->get('search') . '%')
         ->orWhere('code', 'like', '%' . $request->get('search') . '%')
-        ->simplePaginate(3);
+        ->orWhere('netto', 'like', '%' . $request->get('search') . '%')
+        ->simplePaginate(5);
         return view('product.index', ['data_product' => $data]);
     }
 

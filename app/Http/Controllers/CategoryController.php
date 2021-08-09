@@ -35,6 +35,10 @@ class CategoryController extends Controller
         //return view('category.index', ['data_category' => $data]);
         $data = Category::where('name', 'like', '%' . $request->get('search') . '%')
         ->orWhere('scientific', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('category', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('since', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('species', 'like', '%' . $request->get('search') . '%')
+        ->orWhere('type', 'like', '%' . $request->get('search') . '%')
         ->simplePaginate(5);
 
 

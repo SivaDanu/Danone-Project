@@ -13,8 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/hai', function () {
-    return view('layouts.dashboard');
+Route::get('/sorry', function () {
+    return view('layouts.404');
 });
 
 Route::get('/', function () {
