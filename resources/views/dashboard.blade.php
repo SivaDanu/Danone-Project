@@ -91,8 +91,8 @@
 								</li>
 								<li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
 									<ul class="nav child_menu">
-										<li><a href="/sorry">Tables</a></li>
-										<li><a href="/sorry">Table Dynamic</a></li>
+										<li><a href="{{route('category.index')}}">Category Table</a></li>
+										<li><a href="{{route('product.index')}}">Product Table</a></li>
 									</ul>
 								</li>
 								<li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
